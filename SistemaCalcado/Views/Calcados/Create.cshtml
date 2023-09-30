@@ -1,0 +1,57 @@
+﻿@model SistemaCalcado.Models.Calcado
+
+@{
+    ViewData["Title"] = "Create";
+}
+<body style="background-color:#00BFFF">
+    <h1>Criar</h1>
+
+    <h4>Calçado</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Modelo" class="control-label"></label>
+                    <input asp-for="Modelo" class="form-control" />
+                    <span asp-validation-for="Modelo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quantidade" class="control-label"></label>
+                    <input asp-for="Quantidade" class="form-control" />
+                    <span asp-validation-for="Quantidade" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cor" class="control-label"></label>
+                    <input asp-for="Cor" class="form-control" />
+                    <span asp-validation-for="Cor" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Marca" class="control-label"></label>
+                    <input asp-for="Marca" class="form-control" />
+                    <span asp-validation-for="Marca" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Tamanho" class="control-label"></label>
+                    <input asp-for="Tamanho" class="form-control" />
+                    <span asp-validation-for="Tamanho" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Criar" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <input type="submit" value="Listar" class="btn btn-warning" /> 
+    </div>
+
+</body>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
